@@ -1,5 +1,4 @@
 <?php
-
     // require_once 'models/oeuvre.php';
     require_once 'models/modelExposition.php';
     require_once 'views/view.php';
