@@ -5,7 +5,7 @@ $this->title ='Accueil - Site Artiste';?>
         <h1>Bonjour , bienvenue sur le site d'arthur le moustachu !</h1>
     </div>
     <div>
-        <img src="Public/Images/auteur.jpg" alt="Arthur le moustachu !" id="imgauteur">
+        <img src="Public/Images/auteur.jpg" alt="Arthur le moustachu !">
     </div>
     <div>
         <h2>Voici la liste des 3 dernieres expositions :</h2>
