@@ -5,14 +5,14 @@
 
     class ControlerIndex{
 
-        private $exposition;
+        private $lastExposition;
 
         public function __construct(){
-            $this->exposition = new Exposition();
+            $this->lastExposition = new Expositions();
         }
 
         public function index(){
-            $expos = $this->exposition->getLastExpositions();
+            $expos = $this->lastExposition->getLastExpositions();
             
             $view = new Vue('Index');
             $view->render(array('lastExpo'=> $expos));
