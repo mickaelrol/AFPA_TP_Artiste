@@ -1,6 +1,4 @@
 <?php
-
-    // require_once 'models/oeuvre.php';
     require_once 'models/modelExposition.php';
     require_once 'views/view.php';
 
@@ -12,10 +10,10 @@
             $this->exposition = new Exposition();
         }
 
-        public function expositions(){
-            $expos = $this->exposition->getAllExpositions();
+        public function exposition($id){
+            $exposition = $this->exposition->getExposition($id);
             
-            $view = new Vue('Expositions');
-            $view->render(array('AllExpo'=> $expos));
+            $view = new Vue('Exposition');
+            $view->render(array('exposition'=> $exposition));
         }
     }
