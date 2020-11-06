@@ -60,12 +60,6 @@ nav a:hover{
     color: black;
     text-decoration: underline;
 }
-
-#imgauteur{
-    max-width: 40vw;
-}
-
-
 section a{
     text-decoration: none;
     font-size: 1.5rem;
@@ -77,3 +71,50 @@ section a:hover{
     color: black;
     text-decoration: underline;
 }
+img{
+    max-width: 50vw;
+}
+.divexpo{
+        display: flex;
+        align-content: center;
+        justify-content: space-between;
+        margin: 2vw;
+}
+hr:last-child{
+    display: none;
+}
+
+/* /////////////////////////////////////////////////////////// */
+/* ////////////////////// MEDIA 768PX + ////////////////////// */
+/* /////////////////////////////////////////////////////////// */
+
+@media screen and (min-width:768px){
+    .contExpo{
+        display: flex;
+        align-items: center;
+        flex-flow: row wrap;
+
+    }
+    .contExpo p{
+        max-width: 50%;
+        min-width: 40%;
+    }    
+}
+
+
+/* /////////////////////////////////////////////////////////// */
+/* ////////////////////// MEDIA 768PX - ////////////////////// */
+/* /////////////////////////////////////////////////////////// */
+
+@media screen and (max-width:768px){
+    .divexpo{
+        display: block;
+    }
+    .contExpo{
+        align-items: flex-start;
+        flex-flow: column wrap;
+        justify-content: center;
+    }
+}
+
+
