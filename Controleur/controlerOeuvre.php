@@ -1,5 +1,4 @@
 <?php
-    // require_once 'models/oeuvre.php';
     require_once 'models/modelOeuvre.php';
     require_once 'views/view.php';
 
@@ -11,10 +10,10 @@
             $this->oeuvre = new Oeuvre();
         }
 
-        public function oeuvre(){
-            $oeuvre = $this->oeuvre->getOeuvre();
+        public function oeuvre($id){
+            $oeuvre = $this->oeuvre->getOeuvre($id);
             
             $view = new Vue('Oeuvre');
-            $view->render(array('Oeuvre'=> $oeuvre));
+            $view->render(array('oeuvre'=> $oeuvre));
         }
     }
