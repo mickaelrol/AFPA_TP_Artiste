@@ -1,10 +1,9 @@
 <?php
 
-    require 'models/model.php';
 
     class Exposition extends Model {
         public function getLastExpositions(){
-            $sql = "SELECT * FROM exposition ORDER BY id DESC LIMIT 2";
+            $sql = "SELECT * FROM exposition ORDER BY id DESC LIMIT 3";
             $getLastExpo = $this->goQuery($sql);
             return $getLastExpo ;
         }
