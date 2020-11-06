@@ -1,15 +1,11 @@
 <?php
 
-
     class Exposition extends Model {
-        public function getLastExpositions(){
-            $sql = "SELECT * FROM exposition ORDER BY id DESC LIMIT 3";
-            $getLastExpo = $this->goQuery($sql);
-            return $getLastExpo ;
-        }
-        public function getAllExpositions(){
-            $sql = "SELECT * FROM exposition";
-            $getAllExpo =$this->goQuery($sql);
-            return $getAllExpo;
+        public function getExposition($id){
+            $sql = "SELECT * FROM oeuvre O INNER JOIN oeuvre_exposee E ON O.id = E.id_oeuvre WHERE E.id_exposition = ?";
+            $getExposition =$this->goQuery($sql,array($id));
+            $retour = $getExposition->fetchAll();
+            $getExposition->closeCursor();
+            return $retour;
         }
     }
